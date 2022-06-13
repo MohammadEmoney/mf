@@ -35,4 +35,9 @@ class Product extends Model
     {
         return $this->morphMany(Image::class, 'imageable');
     }
+
+    public function featuredImage()
+    {
+        return $this->morphOne(Image::class, 'imageable')->where('featured_image', 1);
+    }
 }

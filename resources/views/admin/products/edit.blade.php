@@ -54,7 +54,7 @@
                             <select class="chosen-select-no-single" name="product_attribute_id[]" style="display: none;" multiple>
                                 <option label="خالی">انتخاب یک ویژگی</option>
                                 @foreach($data['attributes'] as $key => $value)
-                                    <option value="{{ $key }}" {{ $product->productAttribute->where('id', $key) ? "selected" : "" }}>{{ $value }}</option>
+                                    <option value="{{ $key }}" {{ $product->productAttribute->where('id', $key)->first() ? "selected" : "" }}>{{ $value }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -118,7 +118,7 @@
 
                     <!-- Dropzone -->
                     <div class="submit-section">
-                        <form action="{{ route('images.store') }}" class="dropzone" >
+                        <form action="{{ route('images.store', ['model_type' => get_class($product), 'model_id' => $product->id]) }}" class="dropzone" >
                             @csrf
                         </form>
                     </div>

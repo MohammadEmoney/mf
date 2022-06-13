@@ -29,7 +29,13 @@
                         @foreach($products as $key => $product)
                             <tr>
                                 <td>{{  ($products->currentpage()-1) * $products->perpage() + $key + 1 }}</td>
+                                <td><img src="{{ asset('images/' . $product->featuredImage->url) }}" alt="" width="150px"></td>
                                 <td>{{ $product->name }}</td>
+                                <td>{{ $product->slug }}</td>
+                                <td>{{ $product->category->name }}</td>
+                                <td>{{ $product->price }}</td>
+                                <td>{{ $product->sale_price }}</td>
+                                <td>{{ $product->status }}</td>
                                 <td>
                                     <a type="button"
                                         class="button border delete-form"
