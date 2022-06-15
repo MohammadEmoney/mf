@@ -40,4 +40,20 @@ class Product extends Model
     {
         return $this->morphOne(Image::class, 'imageable')->where('featured_image', 1);
     }
+
+    public function scopeHasPrice($query)
+    {
+        $query->whereNotNull('price');
+    }
+
+    public function scopeOnSale($query)
+    {
+        $query->where('on_sale', true);
+    }
+
+    public function scopePublished($query)
+    {
+        $query->where('status', 'publish');
+    }
+
 }

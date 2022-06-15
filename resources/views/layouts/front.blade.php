@@ -14,9 +14,18 @@
 <!-- Header Container
 ================================================== -->
 @include('layouts.front_parts.header')
+
+<!-- NAVIGATION -->
+@include('layouts.front_parts.nav')
+<!-- /NAVIGATION -->
+
 <!-- Header Container / End -->
 
 @yield('content')
+
+<!-- NEWSLETTER -->
+@include('layouts.front_parts.newsletter')
+<!-- /NEWSLETTER -->
 
 <!-- Footer
 ================================================== -->
