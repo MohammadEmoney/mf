@@ -24,8 +24,8 @@
                 <!-- LOGO -->
                 <div class="col-md-3">
                     <div class="header-logo">
-                        <a href="#" class="logo">
-                            <img src="./img/logo.png" alt="">
+                        <a href="{{ route('front.home') }}" class="logo">
+                            <img src="{{ asset('images/logo/logo.png') }}" alt="گالری باران">
                         </a>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
 
                 <!-- SEARCH BAR -->
                 <div class="col-md-6 pull-right">
-                    <div class="header-search">
+                    <div class="header-search text-right">
                         <form>
                             {{-- <select class="input-select">
                                 <option value="0">All Categories</option>

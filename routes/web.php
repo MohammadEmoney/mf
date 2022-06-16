@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\ProductAttributeController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Front\ProductController as FrontProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,7 +35,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', [HomeController::class, 'index'])->name('front.home');
 Route::get('about', [HomeController::class, 'index'])->name('front.about');
 Route::get('contact', [HomeController::class, 'index'])->name('front.contact');
-Route::get('products', [HomeController::class, 'index'])->name('front.products');
+Route::get('products', [FrontProductController::class, 'index'])->name('front.products.index');
+Route::get('products/{product:slug}', [FrontProductController::class, 'show'])->name('front.products.show');
 
 Route::prefix('dashboard')->middleware(['auth'])->group(function(){
     Route::get('/', [AdminHomeController::class, 'index'])->name('dashboard');
