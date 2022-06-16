@@ -1,15 +1,15 @@
 <header>
     <!-- TOP HEADER -->
-    <div id="top-header">
+    <div id="top-header"  dir="rtl">
         <div class="container">
             <ul class="header-links pull-left">
-                <li><a href="#"><i class="fa fa-phone"></i> +98 919 663 5203</a></li>
-                <li><a href="#"><i class="fa fa-envelope-o"></i> hr.liret@gmail.com</a></li>
-                <li><a href="#"><i class="fa fa-map-marker"></i> Alborz - Karaj - KarajNo</a></li>
+                <li><a href="tel:+989381133408"><i class="fa fa-phone"></i> <span dir="ltr">+98 938 1133 408</span></a></li>
+                <li><a href="mailto:mohammadimanikiasaraei@gmail.com?subject=Customer"><i class="fa fa-envelope-o"></i> mohammadimanikiasaraei@gmail.com</a></li>
+                <li><a href="#"><i class="fa fa-map-marker"></i> البرز - کرج - المهدی</a></li>
             </ul>
             <ul class="header-links pull-right">
-                <li><a href="#"><i class="fa fa-telegram"></i> USD</a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i> My Account</a></li>
+                {{-- <li><a href="#"><i class="fa fa-telegram"></i> USD</a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i> My Account</a></li> --}}
             </ul>
         </div>
     </div>
@@ -35,13 +35,13 @@
                 <div class="col-md-6 pull-right">
                     <div class="header-search">
                         <form>
-                            <select class="input-select">
+                            {{-- <select class="input-select">
                                 <option value="0">All Categories</option>
                                 <option value="1">Category 01</option>
                                 <option value="1">Category 02</option>
-                            </select>
-                            <input class="input" placeholder="Search here">
-                            <button class="search-btn">Search</button>
+                            </select> --}}
+                            <input class="input" placeholder="{{ __('What are you looking for?')}}">
+                            <button class="search-btn">{{ __('Search') }}</button>
                         </form>
                     </div>
                 </div>
