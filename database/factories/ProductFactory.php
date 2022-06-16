@@ -28,7 +28,6 @@ class ProductFactory extends Factory
             'name' => $name,
             'slug' => $slug,
             'category_id' => Category::all()->random()->id,
-            'product_attribute_id' => ProductAttribute::all()->random()->id,
             'price' => $price,
             'sale_price' => $sale_price,
             'sku' => $sku,

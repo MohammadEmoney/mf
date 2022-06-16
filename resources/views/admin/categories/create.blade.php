@@ -42,7 +42,7 @@
                         <div class="col-md-12">
                             <h5>دسته</h5>
                             <select class="chosen-select-no-single" name="parent_id" style="display: none;">
-                                <option label="خالی">انتخاب یک دسته</option>
+                                <option value="" label="خالی">انتخاب یک دسته</option>
                                 @foreach($categories as $key => $value)
                                     <option value="{{ $key }}">{{ $value }}</option>
                                 @endforeach

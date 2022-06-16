@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+        <link rel="icon" type="image/x-icon" href="{{ asset('/images/img/favicon.png') }}">
         <title>@yield('title','Baran Gallery')</title>
         <link rel="preconnect" href="//fdn.fontcdn.ir"><link rel="preconnect" href="//v1.fontapi.ir"><link href="https://v1.fontapi.ir/css/Yekan" rel="stylesheet">
 		<!-- Google font -->

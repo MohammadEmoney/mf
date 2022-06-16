@@ -25,7 +25,7 @@
                 <div class="col-md-3">
                     <div class="header-logo">
                         <a href="{{ route('front.home') }}" class="logo">
-                            <img src="{{ asset('images/logo/logo.png') }}" alt="گالری باران">
+                            <img src="{{ asset('images/img/logo.png') }}" alt="گالری باران">
                         </a>
                     </div>
                 </div>
