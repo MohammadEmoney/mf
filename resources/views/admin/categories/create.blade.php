@@ -8,6 +8,9 @@
     <div class="col-lg-12">
 
         <div id="add-listing">
+            @if($errors->any())
+                {!! implode('', $errors->all('<div>:message</div>')) !!}
+            @endif
 
             <!-- Section -->
             <div class="add-listing-section">
