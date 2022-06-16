@@ -22,6 +22,16 @@
 				<li><a href="dashboard-bookmarks.html"><i class="sl sl-icon-heart"></i> نشانکها</a></li>
 				<li><a href="dashboard-add-listing.html"><i class="sl sl-icon-plus"></i> افزودن آگهی</a></li>
 			</ul>
+			<ul data-submenu-title="تنظیمات">
+				<li><a><i class="sl sl-icon-layers"></i> تنظیمات</a>
+					<ul>
+						{{-- <li><a href="{{ route('settings.edit', 1) }}">نوار بالا</a></li> --}}
+					</ul>
+				</li>
+				<li><a href="dashboard-reviews.html"><i class="sl sl-icon-star"></i> نظرات</a></li>
+				<li><a href="dashboard-bookmarks.html"><i class="sl sl-icon-heart"></i> نشانکها</a></li>
+				<li><a href="dashboard-add-listing.html"><i class="sl sl-icon-plus"></i> افزودن آگهی</a></li>
+			</ul>
 
 			<ul data-submenu-title="اکانت">
 				<li><a href="dashboard-my-profile.html"><i class="sl sl-icon-user"></i> پروفایل من</a></li>

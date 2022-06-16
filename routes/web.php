@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\HomeController as AdminHomeController;
 use App\Http\Controllers\Admin\ImageController;
 use App\Http\Controllers\Admin\ProductAttributeController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Front\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,9 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', [HomeController::class, 'index'])->name('front.home');
+Route::get('about', [HomeController::class, 'index'])->name('front.about');
+Route::get('contact', [HomeController::class, 'index'])->name('front.contact');
+Route::get('products', [HomeController::class, 'index'])->name('front.products');
 
 Route::prefix('dashboard')->middleware(['auth'])->group(function(){
     Route::get('/', [AdminHomeController::class, 'index'])->name('dashboard');
@@ -38,4 +42,5 @@ Route::prefix('dashboard')->middleware(['auth'])->group(function(){
     Route::resource('categories', CategoryController::class);
     Route::resource('products', ProductController::class);
     Route::resource('images', ImageController::class);
+    Route::resource('settings', SettingController::class);
 });
